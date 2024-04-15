@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./input.css">
+    <style>
+        #vehicle{
+        display: none;
+        }
+        #vehicle:target{
+            display: block;
+            transform: translateY(5px);
+            transition-duration: 10s;
+        }
+        #map{
+            display:none;
+        }
+        #map:target{
+            display: block;
+            border: 5px solid grey;
+            border-radius: 12px;
+            box-shadow: 8px 8px 15px grey;
+        }
+        #thank{
+            display:none;
+        }
+        #thank:target{
+            display: block;
+            
+        }
+        iframe{
+        width: 870px;
+        height:380px;
+        overflow: hidden;
+        padding: 15px
+        }
+        #two{
+          
+            font-size: 20px;
+            font-weight: 400;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class=" h-32 bg-[burlywood]">
+        <img src="./brandlogo.png" alt=" " class="w-48 h-32 inline">
+        <a href="./index.html"><span class="text-[55px] inline-block ml-7 relative top-4 font-mono">gaadiDoc<sup>+</sup></span></a>
+        <div id="navi" class="flex justify-evenly w-[800px] h-32 relative left-[720px] -top-[90px]">
+            <a href="./gaadidochome.html" class="hover:translate-y-5 duration-150 font-[arial] text-[30px] inline"><span class="">Home</span></a>
+            <a href="#signup" class="hover:translate-y-5 duration-150 font-[arial] text-[30px] inline"><span class="">Book A Doc</span></a>
+            <a href="#signup" class="hover:translate-y-5 duration-150 font-[arial] text-[30px] inline"><span class="">Docs Near You</span></a>
+            <a href="" class="hover:translate-y-5 duration-150 font-[arial] text-[30px] inline"><span class="">Contact Us</span></a>
+        </div>
+        </nav>
+        <main>
+            <section>
+                <div id="card" class="w-[550px] h-[500px] rounded-[12px] drop-shadow-2xl border-8 relative left-[15px] top-20 p-[28px] bg-[bisque]">
+                    <div class="mb-10 text-[20px] font-[helvetica] relative left-[40px]">Book A Doc</div>
+                    <label for="pick" class="mb-8 text-[20px] font-[helvetica] relative left-[40px]">Pickup Location</label>
+                    <input type="text" class="w-[360px] h-[50px] ml-5 bg-[whitesmoke] rounded-md relative left-[40px] z-10" placeholder="     Enter Your Location">
+                    <div class="w-[35px] h-[51px] bg-[whitesmoke] rounded-l-md relative -top-[50px] left-[27px]"><img src="./powerhouse.png" alt="" class="w-[30px] h-[30px] relative top-[4px] left-[5px] z-10"></div>
+                    <div>
+                        <label for="pick" class="mb-8 text-[20px] font-[helvetica] relative left-[40px]">Pickup Now</label><br>
+                        <div class="dropdown-center relative " >
+                            <button class="btn btn-secondary dropdown-toggle w-[380px] h-[50px] bg-[whitesmoke] text-[black] relative left-[40px]" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             Now
+                            </button>
+                            <ul class="dropdown-menu left-[40px]">
+                              <li class="w-[380px]"><a class="dropdown-item" href="#"><select name="Now" id="" class="w-[360px]">
+                                <option value="">4:00 PM</option>
+                                <option value="">5:00 PM</option>
+                                <option value="">6:00 PM</option>
+                                <option value="">7:00 PM</option>
+                                <option value="">8:00 PM</option>
+                                <option value="">9:00 PM</option>
+                                <option value="">10:00 PM</option>
+                                <option value="">11:00 PM</option>
+                                <option value="">12:00 AM</option>
+                                <option value="">1:00 AM</option>
+                                <option value="">2:00 AM</option>
+                                <option value="">3:00 AM</option>
+                                <option value="">4:00 AM</option>
+                              </select></a></li>
+                              <li class="w-[380px]  relative "><a class="dropdown-item" href="#"><input type="date" class="w-[360px]"></a></li>
+                             
+                            </ul>
+                          </div>
+                        
+                    </div>
+                    <a href="#map"><button class="w-[380px] h-[40px] relative top-[30px] bg-[burlywood] left-[40px] rounded-md">Go!</button></a> 
+                </div>
+                <div id="map" class="w-[900px] h-[500px] border-[4px] border-[grey rounded-2xl] relative left-[590px] -top-[420px]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d59152.97095221243!2d78.3983745351073!3d17.488752695751497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x3bcb90101c1ab987%3A0x7057451af7496d1e!2sSuchitra%20Rd%2C%20Telangana!3m2!1d17.5006234!2d78.4738059!4m5!1s0x3bcb918df14cb897%3A0x3e5fe4685cd52175!2sKphb%20Temple%20Busstop%2C%20eSeva%20Ln%2C%20KPHB%20Phase%20III%2C%20KPHB%20Phase%202%2C%20Kukatpally%2C%20Hyderabad%2C%20Telangana%20500072!3m2!1d17.4877799!2d78.39551809999999!5e0!3m2!1sen!2sin!4v1712987218642!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"  ></iframe>
+                    <a href="#vehicle"><button class="w-[300px] h-[50px] rounded-2xl bg-[burlywood] align-middle relative left-[270px] top-[40px] text-[20px]">Confirm</button></a>
+                </div>
+                  <div id="vehicle" class="w-[550px] h-[520px] border-[10px] border-[lightgrey] rounded-md shadow-2xl relative left-[700px] -top-[435px] bg-[bisque] p-[20px]">
+                        <span class="text-[20px] font-[helvetica] relative mb-[25px]">Choose Your Vehicle</span>
+                        <a href="#thank"><div id="two" class="mb-[25px] w-[468px] h-[70px] border-[3px] border-[grey rounded-xl] bg-[whitesmoke]  text-[20px] align-middle rounded-md hover:translate-y-5 duration-300"><img src="./bike logo.png" alt="" class="w-[75px] h-[68px] inline rounded-md shadow-2xl relative -left-[10px]relative -left-[10px]"><span class="text-center relative left-[135px]">150 ₹</span> </div></a>
+                        <a href="#thank"><div id="two" class="mb-[25px] w-[468px] h-[70px] border-[3px] border-[grey rounded-xl] bg-[whitesmoke]  text-[20px] align-middle rounded-md hover:translate-y-5 duration-300"><img src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_698,h_698/v1597151228/assets/fc/101ff8-81a1-46c3-995a-67b4bbd2f2bf/original/TukTuk.jpg" alt="" class="w-[75px] h-[68px] inline rounded-md shadow-2xl relative -left-[10px]relative -left-[10px]"><span class="text-center relative left-[135px]">170 ₹</span> </div></a>
+                        <a href="#thank"><div id="two" class="mb-[25px] w-[468px] h-[70px] border-[3px] border-[grey rounded-xl]  bg-[whitesmoke]  text-[20px] align-middle rounded-md hover:translate-y-5 duration-300"><img src="./Uber-Ola-Electric-EV-660x440.jpg" alt="" class="w-[75px] h-[68px] inline rounded-md shadow-2xl relative -left-[10px]"><span class="text-center relative left-[135px]">220 ₹</span> </div></a>
+                        <a href="#thank"><div id="two" class="w-[468px] h-[70px] border-[3px] border-[grey rounded-xl] bg-[whitesmoke]  text-[20px] align-middle rounded-md hover:translate-y-5 duration-300"><img src="./red truck.png" alt="" class="w-[75px] h-[68px] inline rounded-md shadow-2xl relative -left-[10px]"><span class="text-center relative left-[135px]">310 ₹</span> </div></a>
+                        <a href="#thank"><button class="w-[350px] h-[50px] bg-[bisque] rounded-lg align-middle text-center relative left-[60px] top-[22px] border-[4px] border-[grey]">Confirm</button></a>
+                  </div>
+                  <div id="thank" class="w-[580px] h-[500px] border-[8px] border-[grey] rounded-lg bg-[burlywood] shadow-2xl relative left-[600px] -top-[420px] overflow-hidden">
+                    <img src="./tick.gif" alt="" class="w-[580px] h-[300px] ">
+                    <h1 class="text-[50px] text-center font-[tahoma] font-[100px] relative">Pickup Confirmed!</h1><br>
+                    <h1 class="text-center font-[tahoma] text-[30px] font-[30px] relative">Your Doc Will Be Right On Time</h1>
+                  </div>
+            </section>
+            
+        </main>
+</body>
+</htm70
